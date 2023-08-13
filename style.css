@@ -1,0 +1,375 @@
+/* css reset */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+
+    scroll-behavior: smooth;
+}
+
+/* img and logo image for navbar*/
+#logo {
+    margin: 10px 34px;
+}
+
+#logo img {
+    width: 59px;
+    height: 59px;
+    margin: 3px 6px;
+
+}
+
+/* NAVIGATION BAR */
+/* Navbar Styles */
+#navbar {
+    display: flex;
+    align-items: center;
+    top: 0;
+    position: sticky;
+    justify-content: space-between;
+    background-color: transparent;
+    /* Remove background-color */
+    padding: 0px;
+    /* Reduce the top and bottom padding */
+    z-index:1;
+
+}
+
+#navbar::before {
+    content: "";
+    position: absolute;
+    height: 80%;
+    /* Change the height to cover the entire navbar */
+    width: 100%;
+    background-color: black;
+    z-index: -1;
+    /* For backside shifting */
+    opacity: 0.29;
+    /* We use opacity level for transparency */
+}
+
+
+#navbar ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#navbar ul li {
+    margin: 0 10px;
+}
+
+#navbar ul li a {
+    color: cyan;
+    text-decoration: none;
+    padding: 5px 12px;
+    /* Reduce the padding on the left and right */
+    border-radius: 20px;
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan;
+
+}
+
+#navbar ul li a:hover {
+    box-shadow: 0 0 5px cyan,
+        0 0 25px cyan,
+        0 0 50px cyan,
+        0 0 500px cyan,
+        0 0 600px cyan;
+        background-color: aqua;
+        color: #000;
+}
+
+/* Search Box Styles */
+.search_box {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    /* Add this to push the search box to the right */
+    margin-right: 40px;
+
+}
+
+.search_box input {
+    padding: 8px 16px;
+    border: none;
+    outline: none;
+    background: #fff;
+    border-radius: 4px;
+    margin-right: 10px;
+    /* Add some space to the right of the search box */
+    width: 340px;
+    height: 100%;
+    padding: 0 10px;
+}
+
+.search_box .fa-search {
+    color: cyan;
+    font-size: 8px;
+    cursor: pointer;
+    position: relative;
+    padding: 8px;
+    cursor: pointer;
+
+}
+
+
+
+#pass {
+    display: flex;
+    flex-direction: column-reverse;
+    color: blue;
+}
+
+/* Home section */
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 200px;
+    height: 470px;
+    margin: 0px;
+}
+
+/* for home background we again use squdo selector same as nav bar */
+#home::before {
+    content: "";
+    position: absolute;
+    height: 110%;
+    width: 100%;
+    background: url('../images/bg1.jpg') no-repeat center center/cover;
+    z-index: -1;
+    /*For backside shifting*/
+    opacity: 0.89;
+    /*we use opacity level for transperency */
+    margin: 0px;
+    filter: blur(8px);
+}
+
+#home h1 {
+    color: white;
+    text-align: center;
+}
+
+#home p {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+/* sevices section */
+#services {
+    display: flex;
+    margin: 0px;
+    height: 100%;
+    /* margin-top: 12px; */
+}
+
+#services .box {
+    /* border: 2px solid red; */
+    padding: 34px;
+    margin: 20px;
+    border-radius: 22px;
+    background-color: black;
+    color: white;
+    box-shadow: 0 0 5px cyan,
+        0 0 25px cyan;
+    cursor: pointer;
+}
+
+#services .box img {
+    height: 160px;
+    display: block;
+    margin: auto;
+}
+
+#services .box:hover {
+    box-shadow: 0 0 5px cyan,
+        0 0 25px cyan, 0 0 50px cyan,
+        0 0 100px cyan, 0 0 200px cyan;
+    color: aqua;
+    cursor: pointer;
+    animation: flip;
+}
+
+/* Clients Section */
+#client-section {
+    position: relative;
+
+}
+
+#client-section::before {
+    content: "";
+    position: absolute;
+    background: url('../images/bg3.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.99;
+}
+
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.client-item {
+    padding: 34px;
+    box-shadow: cyan;
+    position: relative;
+    color: antiquewhite;
+    font-size: 5em;
+}
+
+#clients img {
+    height: 124px;
+}
+
+
+
+/* contact section */
+#contact {
+    position: relative;
+    /* margin:20px */
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url('../images/bg2.jpg') no-repeat center center/cover;
+    z-index: -1;
+    /*For backside shifting*/
+    opacity: 0.7;
+    /*we use opacity level for transperency */
+    margin: 0px;
+    position: absolute;
+}
+
+/* footer section */
+footer {
+    background-color: black;
+    color: aliceblue;
+    font-size: medium;
+    text-align: center;
+    font-size: x-large;
+    padding: 9px 20px;
+}
+
+/* contact section */
+
+#contactbox {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 34px;
+
+}
+
+#contactbox input,
+#contactbox textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    border-radius: 10px;
+
+}
+
+#contactbox form {
+    width: 40%;
+}
+
+#contactbox label {
+    font-size: 1.9rem;
+}
+
+/* utility classes */
+.h-primary {
+    font-size: 3.8rem;
+    padding: 12px;
+    text-align: center;
+    color: aliceblue;
+
+}
+
+button {
+    padding: 6px 20px;
+    /*top_bottom , left_right*/
+    color: rgb(10, 10, 10);
+    background-color: cyan;
+    border-radius: 22px;
+    margin: 17px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    box-shadow: 0 0 5px cyan,
+        0 0 25px cyan;
+    border: 0px;
+}
+
+button:hover {
+    box-shadow: 0 0 5px cyan,
+        0 0 25px cyan, 0 0 50px cyan,
+        0 0 100px cyan, 0 0 200px cyan;
+}
+
+.h-secondary {
+    font-size: 2.8rem;
+    padding: 12px;
+    text-align: center;
+    /* color: aliceblue; */
+}
+
+.h-third {
+    font-size: 3.8rem;
+    text-align: center;
+
+}
+
+.services-container {
+    margin-top: 170px;
+}
+
+#new {
+    background-color: rgb(2, 52, 59);
+}
+
+.logo {
+    position: relative;
+    color: antiquewhite;
+    font-size: 5em;
+}
+
+.client {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Add styles for the search box */
+.search_box {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search_box input[type="search"] {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Adjust the position of the search icon (Font Awesome) */
+.search_box .fa-search {
+    position: absolute;
+    right: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
